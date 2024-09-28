@@ -12,10 +12,10 @@
     <title>Title</title>
 </head>
 <body>
-<nav class="container py-3 bg-black">
+<nav class="container  py-3 bg-dark">
     <div class="row text-center ">
         <a class="col-4 text-decoration-none text-white" href="#">Blog</a>
-        <a class="col-4 text-decoration-none text-white" href="#">Projects</a>
+        <a class="col-4 text-decoration-none text-white" href="#projects">Projects</a>
         <a class="col-4 text-decoration-none text-white" href="#">Contact</a>
     </div>
 </nav>
@@ -26,7 +26,7 @@
             <h2 class="my-5 py-5">Full Stack Developer</h2>
             <div class="icons row my-5 d-flex justify-content-around">
                 <div class="col-1">
-                    <a href="#">
+                    <a href="https://github.com/Henry-Tottle" target="_blank">
                         <h3 class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover">
                             <img class="border border-black rounded p-1 "
                                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAARNJREFUSEvFlQEOwjAIRdnJ1JOpJ1NPpvmmNL/sl7WLi02WLQv9DyjQxQ5ey8H6NgI4mxmeU3EG308ze5U3vrsrA0DoWsQzDQDuBbay6wFuRXwmg4BgX7MUYI+4i64gCvAu1h66p0pF4zacygunKwLYexkyUfyw8Yv3AQrIdzEAGx4k0BhuHEZMa42CAdFoKwJmRufq3h5gxnsHIXqAsOp+BvjhNgYTdcqAmn4GSA+OAsQCGOHIDPzqkLsFkpUpvB6pJNX5soog6OeAOuYOjlWVDcLGqdjJXs8u6N6pSGLVyHmUDbut9KSpUaOCKyXOFjXvhzo/u3B8tmNSqmgcsOvCidFAJF6NPBa6fTJyJ4802f8AH1WFTxltfZ56AAAAAElFTkSuQmCC"/>
@@ -34,7 +34,7 @@
                     </a>
                 </div>
                 <div class="col-1">
-                    <a  href="#">
+                    <a href="mailto:henrywilliamottle@gmail.com">
                         <h3 class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover">
                             <img class="border border-black rounded p-1"
                                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAL9JREFUSEvdlWEOgyAMhR8nczvZ9GTzZtueseZJgFGUPzQxJBT69bWAAZ0tdI6PsQAPAC8AHK/YCmD5xeF4KtH7huCWGIM/Y8Bn99Kx0RuM6pnoEVubbAA6KXF2AjT4X4AXwmTYP7Ut+ZQCZm+La5Ro73RvFkBHLDfVl9waK3URYFJVuqrR+ePE7JtcAO6JIZwrldANiCGmLnecmwAMyprzm/SmJo5yM6D2WgwM6P7YdX+ua5voWjfWL9MlvXbxF89nNxlO+5NzAAAAAElFTkSuQmCC"/>
@@ -42,7 +42,7 @@
                     </a>
                 </div>
                 <div class="col-1">
-                    <a  href="#">
+                    <a href="www.linkedin.com/in/henry-william-tottle" target="_blank">
                         <h3 class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover">
                             <img class="border border-black rounded p-1"
                                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAO1JREFUSEvtlcsOgjAQRQ9bHwvjSr9Gf8m4V5fGj9Kf0aVx42OhUYYMZBhikAKuaEJIW3rP9M60RLTcopb18YA+0AOewAO41w3AAgbACliq6DZ+rxUUzLGACXBySiPgEqwOOYumwNGJjYFzU4ChWrJQwZ32b00BREcgkosXcNWnjn6himZO7aD9X8bTb3MSvkzfZlYWzLW/B1KIjG+04jxYxqXyshYK8MJWU4LKdhMCKMuJ3XkhB79YJABrhVgiBzRtjQByNsQAG5iAMmdCLfLrbBF0gCSXnUWJDd+uiloWlZ3SyvN//+lXjrBswQdbGEkZo29jyAAAAABJRU5ErkJggg=="/>
@@ -52,6 +52,7 @@
             </div>
         </div>
     </section>
+    <h2 class="bg-dark col-sm-10 mx-auto"><br></h2>
     <section class="about container text-center ">
         <div class="m-3">
             <h1 class="m-5">About me:</h1>
@@ -63,95 +64,109 @@
                 am keen
                 to sink my teeth into any project and relish the opportunity to learn more programming languages.</p>
         </div>
-        <div>
-            <img class="w-25 h-25 " src="profile_picture.jpg"/>
-        </div>
     </section>
-    <section  class="text-center ">
-        <h1>Projects:</h1>
-        <section class="projects d-flex md-flex-row md-flex-wrap md-justify-content-between flex-column">
-            <div class="card md-col-3 md-mx-1 my-1">
-
-                    <img src="bookCollectorScreenshot.png" class="card-img-top">
+    <section class="container">
+        <h1 id="projects">Projects:</h1>
+        <section class="projects row">
+            <div class="card  col-sm m-1 border">
+                <img src="bookCollectorScreenshot.png" class="card-img-top">
                 <div class="card-body">
                     <h3 class="card-title">Book Collector App</h3>
-                        <p class="card-text mx-auto">Using a combination of PHP, SQL, HTML and CSS I have built a collector app
-                            that tracks what books I have read, filters through genres and sorts through different fields.
-                            This was my second project at iOAcademy, and it was the first project where I had the opportunity to write in PHP.
-                        </p>
-                    <a href="https://2024-henryt.dev.io-academy.uk/book_collection_app/" target="_blank" class="btn btn-primary">Collector App</a>
+                    <p class="card-text mx-auto">Using a combination of PHP, SQL, HTML and CSS I have built a collector
+                        app
+                        that tracks what books I have read, filters through genres and sorts through different fields.
+                        This was my second project at iOAcademy, and it was the first project where I had the
+                        opportunity to write in PHP.
+                    </p>
+                    <a href="https://2024-henryt.dev.io-academy.uk/book_collection_app/" target="_blank"
+                       class="btn btn-secondary">Collector App</a>
                 </div>
             </div>
-            <div class="card md-col-3 md-mx-1 my-1">
-                    <img src="JavascriptGameScreenshot.png" class="card-img-top">
+            <div class="card col-sm m-1">
+                <img src="JavascriptGameScreenshot.png" class="card-img-top">
                 <div class="card-body">
                     <h3 class="card-title">Film Quote Guessing Game</h3>
-                    <p class="card-text">Using Javascript to provide interactivity to a page, I have build a film quote guessing game.
-                            You have 30 seconds to correctly guess as many film quotes as possible.
+                    <p class="card-text">Using Javascript to provide interactivity to a page, I have build a film quote
+                        guessing game.
+                        You have 30 seconds to correctly guess as many film quotes as possible.
                     </p>
-                    <a href="https://io-academy.github.io/2024-jul-fst-film-quote-quiz/" target="_blank" class="btn btn-primary">Film Quote Guessing Game</a>
+                    <a href="https://io-academy.github.io/2024-jul-fst-film-quote-quiz/" target="_blank"
+                       class="btn btn-secondary">Film Quote Guessing Game</a>
                 </div>
 
             </div>
             </div>
-            <div class="card md-col-3 md-mx-1 my-1">
-                    <img src="jobsiteScreenShot.png" class="card-img-top">
-                    <div class="card-body">
+            <div class="card col-sm m-1">
+                <img src="jobsiteScreenShot.png" class="card-img-top">
+                <div class="card-body">
                     <h3 class="card-title">React Project</h3>
-                        <p class="card-text">Using React and a preexisting API I have created a front end of a job listing website from
-                            a specified design.
-                            This has been an opportunity to also demonstrate knowledge of Bootstrap to quickly and efficiently replicate
-                            design choices.
-                        </p>
-                        <a href="https://io-academy.github.io/2024-jul-fst-film-quote-quiz/" target="_blank" class="btn btn-primary">React Project</a>
+                    <p class="card-text">Using React and a preexisting API I have created a front end of a job listing
+                        website from
+                        a specified design.
+                        This has been an opportunity to also demonstrate knowledge of Bootstrap to quickly and
+                        efficiently replicate
+                        design choices.
+                    </p>
+                    <a href="https://io-academy.github.io/2024-jul-fst-film-quote-quiz/" target="_blank"
+                       class="btn btn-secondary">React Project</a>
 
                 </div>
 
             </div>
-            <div class="card md-col-3 md-mx-1 my-1">
-                    <img src="furnitureStoreApi.png" class="card-img-top">
-                    <div class="card-title">
+        </section>
+        <section class="row">
+            <div class="card col-sm m-1">
+                <img src="furnitureStoreApi.png" class="card-img-top">
+                <div class="card-title">
                     <h3>Furniture Store API</h3>
-                        <p class="card-text">Demonstrating knowledge of Object Oriented Programming in PHP, as well as SQL and JSON, I have built
-                            a working API for a preexisting front end website.
-                        </p>
-                        <a href="https://2024-henryt.dev.io-academy.uk/build/" target="_blank" class="btn btn-primary">Furniture Store API</a>
-                        <a href="https://2024-henryt.dev.io-academy.uk/build/" target="_blank" class="btn btn-primary">Furniture Store Blog *to link*</a>
+                    <p class="card-text">Demonstrating knowledge of Object Oriented Programming in PHP, as well as SQL
+                        and JSON, I have built
+                        a working API for a preexisting front end website.
+                    </p>
+                    <a href="https://2024-henryt.dev.io-academy.uk/build/" target="_blank" class="btn btn-secondary">Furniture
+                        Store API</a>
+                    <a href="https://2024-henryt.dev.io-academy.uk/build/" target="_blank" class="btn btn-secondary">Furniture
+                        Store Blog *to link*</a>
                 </div>
                 </a>
             </div>
-            <div class="card md-col-3 md-mx-1 my-1">
-                    <img src="AcademyPortal.png" class="card-img-top">
-                    <div class="card-body ">
+            <div class="card col-sm m-1">
+                <img src="AcademyPortal.png" class="card-img-top">
+                <div class="card-body ">
                     <h3 class="card-title">Academy Portal - Full Stack</h3>
-                        <p class="card-text mx-auto ">Using MVC architecture and Slim framework we have added to and maintained an existing codebase.  In this project I was responsible
-                            for adding documentation for existing API routes, adding a modal to a Javascript Calendar Library to
-                            be able to view event details, and worked on debugging clipboard errors. Read more about it in my blog.
-                        </p>
-                        <a href="https://2024-henryt.dev.io-academy.uk/build/" target="_blank" class="btn btn-primary">Academy Portal blog *to link*</a>
+                    <p class="card-text mx-auto ">Using MVC architecture and Slim framework we have added to and
+                        maintained an existing codebase. In this project I was responsible
+                        for adding documentation for existing API routes, adding a modal to a Javascript Calendar
+                        Library to
+                        be able to view event details, and worked on debugging clipboard errors. Read more about it in
+                        my blog.
+                    </p>
+                    <a href="https://2024-henryt.dev.io-academy.uk/build/" target="_blank" class="btn btn-secondary">Academy
+                        Portal blog *to link*</a>
 
                 </div>
             </div>
-            <div class="card md-col-3 md-mx-1 my-1">
+            <div class="card col-sm m-1">
 
-                    <img src="To%20Do%20ScreenShot.png" class="card-img-top">
-                    <div class="card-body ">
+                <img src="To%20Do%20ScreenShot.png" class="card-img-top">
+                <div class="card-body ">
                     <h3 class="card-title">To Do App</h3>
-                        <p class="card-text mx-auto ">Using MVC architecture and Slim framework we have added to and maintained an existing codebase.  In this project I was responsible
-                            for adding documentation for existing API routes, adding a modal to a Javascript Calendar Library to
-                            be able to view event details, and worked on debugging clipboard errors.
-                        </p>
-                        <a href="https://2024-henryt.dev.io-academy.uk/build/" target="_blank" class="btn btn-primary">To-do App *not on plesk yet*</a>
+                    <p class="card-text mx-auto ">Using MVC architecture and Slim framework we have added to and
+                        maintained an existing codebase. In this project I was responsible
+                        for adding documentation for existing API routes, adding a modal to a Javascript Calendar
+                        Library to
+                        be able to view event details, and worked on debugging clipboard errors.
+                    </p>
+                    <a href="https://2024-henryt.dev.io-academy.uk/build/" target="_blank" class="btn btn-secondary">To-do
+                        App *not on plesk yet*</a>
 
                 </div>
             </div>
-
-
         </section>
     </section>
 </main>
-<footer>
-
+<footer class="footer bg-dark text-white text-center">
+<p><small>Thanks for getting this far! Henry Tottle 2024</small></p>
 </footer>
 </body>
 </html>
