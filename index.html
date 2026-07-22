@@ -3,241 +3,438 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+          content="Henry Tottle: Full Stack Developer based near Bath, specialising in Django, systems architecture and internal business platforms. Python, JavaScript, React and PHP projects.">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="icon" href="profile_picture.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
+          rel="stylesheet">
+    <link rel="icon" href="assets/profile.jpg">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"
             defer></script>
 
-    <title>Henry Tottle: Full Stack Developer</title>
+    <title>Henry Tottle · Full Stack Developer</title>
+
+    <style>
+        :root {
+            --ink: #0f172a;
+            --ink-soft: #334155;
+            --paper: #f8fafc;
+            --accent: #0d9488;
+            --accent-dark: #0f766e;
+        }
+
+        body {
+            font-family: "Inter", system-ui, -apple-system, sans-serif;
+            color: var(--ink-soft);
+            background-color: var(--paper);
+        }
+
+        h1, h2, h3, .navbar-brand {
+            font-family: "Space Grotesk", "Inter", sans-serif;
+            color: var(--ink);
+        }
+
+        .navbar {
+            background-color: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(6px);
+        }
+
+        .hero {
+            background: linear-gradient(160deg, #0f172a 0%, #1e293b 55%, #134e4a 100%);
+            color: #e2e8f0;
+        }
+
+        .hero h1 {
+            color: #f8fafc;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            letter-spacing: -0.02em;
+        }
+
+        .hero .lead {
+            color: #94a3b8;
+            max-width: 40rem;
+        }
+
+        .hero .accent {
+            color: #2dd4bf;
+        }
+
+        .btn-accent {
+            background-color: var(--accent);
+            border-color: var(--accent);
+            color: #fff;
+        }
+
+        .btn-accent:hover, .btn-accent:focus {
+            background-color: var(--accent-dark);
+            border-color: var(--accent-dark);
+            color: #fff;
+        }
+
+        .social-link {
+            color: #cbd5e1;
+            transition: color 0.15s ease;
+        }
+
+        .social-link:hover {
+            color: #2dd4bf;
+        }
+
+        .section-title {
+            letter-spacing: -0.01em;
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 3rem;
+            height: 0.25rem;
+            margin-top: 0.5rem;
+            border-radius: 2px;
+            background-color: var(--accent);
+        }
+
+        .profile-img {
+            max-width: 260px;
+            border: 4px solid #fff;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.15);
+        }
+
+        .project-card {
+            border: 1px solid #e2e8f0;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
+        }
+
+        .project-card .card-img-top {
+            height: 200px;
+            object-fit: cover;
+            object-position: top;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .tech-tag {
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            color: var(--accent-dark);
+            background-color: #ccfbf1;
+            border-radius: 999px;
+            padding: 0.2rem 0.6rem;
+        }
+
+        .card-links .btn {
+            font-size: 0.85rem;
+        }
+
+        .featured-card {
+            border-left: 4px solid var(--accent);
+        }
+
+        .featured-badge {
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #fff;
+            background-color: var(--accent);
+            border-radius: 999px;
+            padding: 0.25rem 0.75rem;
+        }
+
+        footer {
+            background-color: var(--ink);
+        }
+
+        footer a {
+            color: #5eead4;
+        }
+    </style>
 </head>
 <body>
-<nav class="container shadow  py-3 bg-dark">
-    <div class="row text-center ">
-        <a class="col-4 text-decoration-none text-white link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="HenryTottleAprilCV.pdf" target="_blank">CV</a>
-        <a class="col-4 text-decoration-none text-white link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="#projects">Projects</a>
-        <a class="col-4 text-decoration-none text-white link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="#contact">Contact</a>
+<nav class="navbar navbar-expand navbar-dark sticky-top shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fw-semibold text-white" href="#">Henry Tottle</a>
+        <div class="navbar-nav ms-auto">
+            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#projects">Projects</a>
+            <a class="nav-link" href="Henry_Tottle_CV_2026.pdf" target="_blank">CV</a>
+            <a class="nav-link" href="#contact">Contact</a>
+        </div>
     </div>
 </nav>
 <main>
-    <section class="hero container text-center my-5">
-        <div class="heroDiv col">
-            <H1 class="my-5 py-5">Henry Tottle:</H1>
-            <h2 class="my-5 py-5">Full Stack Developer</h2>
-            <div class="icons row my-5 d-flex justify-content-evenly">
-                <div class="col-1">
-                    <a href="https://github.com/Henry-Tottle" target="_blank">
-                        <h3 class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover">
-                            <img class="border shadow border-black rounded p-1 "
-                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAARNJREFUSEvFlQEOwjAIRdnJ1JOpJ1NPpvmmNL/sl7WLi02WLQv9DyjQxQ5ey8H6NgI4mxmeU3EG308ze5U3vrsrA0DoWsQzDQDuBbay6wFuRXwmg4BgX7MUYI+4i64gCvAu1h66p0pF4zacygunKwLYexkyUfyw8Yv3AQrIdzEAGx4k0BhuHEZMa42CAdFoKwJmRufq3h5gxnsHIXqAsOp+BvjhNgYTdcqAmn4GSA+OAsQCGOHIDPzqkLsFkpUpvB6pJNX5soog6OeAOuYOjlWVDcLGqdjJXs8u6N6pSGLVyHmUDbut9KSpUaOCKyXOFjXvhzo/u3B8tmNSqmgcsOvCidFAJF6NPBa6fTJyJ4802f8AH1WFTxltfZ56AAAAAElFTkSuQmCC"/>
-                        </h3>
-                    </a>
-                </div>
-                <div class="col-1">
-                    <a href="mailto:henrywilliamtottle@gmail.com">
-                        <h3 class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover">
-                            <img class="border shadow border-black rounded p-1"
-                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAL9JREFUSEvdlWEOgyAMhR8nczvZ9GTzZtueseZJgFGUPzQxJBT69bWAAZ0tdI6PsQAPAC8AHK/YCmD5xeF4KtH7huCWGIM/Y8Bn99Kx0RuM6pnoEVubbAA6KXF2AjT4X4AXwmTYP7Ut+ZQCZm+La5Ro73RvFkBHLDfVl9waK3URYFJVuqrR+ePE7JtcAO6JIZwrldANiCGmLnecmwAMyprzm/SmJo5yM6D2WgwM6P7YdX+ua5voWjfWL9MlvXbxF89nNxlO+5NzAAAAAElFTkSuQmCC"/>
-                        </h3>
-                    </a>
-                </div>
-                <div class="col-1">
-                    <a href="https://www.linkedin.com/in/henry-william-tottle" target="_blank">
-                        <h3 class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover">
-                            <img class="border shadow border-black rounded p-1"
-                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAO1JREFUSEvtlcsOgjAQRQ9bHwvjSr9Gf8m4V5fGj9Kf0aVx42OhUYYMZBhikAKuaEJIW3rP9M60RLTcopb18YA+0AOewAO41w3AAgbACliq6DZ+rxUUzLGACXBySiPgEqwOOYumwNGJjYFzU4ChWrJQwZ32b00BREcgkosXcNWnjn6himZO7aD9X8bTb3MSvkzfZlYWzLW/B1KIjG+04jxYxqXyshYK8MJWU4LKdhMCKMuJ3XkhB79YJABrhVgiBzRtjQByNsQAG5iAMmdCLfLrbBF0gCSXnUWJDd+uiloWlZ3SyvN//+lXjrBswQdbGEkZo29jyAAAAABJRU5ErkJggg=="/>
-                        </h3>
-                    </a>
+    <header class="hero py-5">
+        <div class="container py-5">
+            <p class="text-uppercase fw-semibold mb-2 accent" style="letter-spacing: 0.15em;">Full Stack Developer</p>
+            <h1 class="fw-bold mb-3">Hi, I'm Henry Tottle.</h1>
+            <p class="lead mb-4">I build full stack web applications with Django, Python and JavaScript,
+                from warehouse dispatch systems and automated stock pipelines to polished operational
+                dashboards.</p>
+            <div class="d-flex flex-wrap gap-2 mb-4">
+                <a href="#projects" class="btn btn-accent btn-lg">View my work</a>
+                <a href="Henry_Tottle_CV_2026.pdf" target="_blank" class="btn btn-outline-light btn-lg">Download CV</a>
+            </div>
+            <div class="d-flex gap-4 align-items-center">
+                <a class="social-link" href="https://github.com/Henry-Tottle" target="_blank" aria-label="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                         viewBox="0 0 16 16">
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                    </svg>
+                </a>
+                <a class="social-link" href="https://www.linkedin.com/in/henry-william-tottle" target="_blank"
+                   aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                         viewBox="0 0 16 16">
+                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                    </svg>
+                </a>
+                <a class="social-link" href="mailto:henrywilliamtottle@gmail.com" aria-label="Email">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                         viewBox="0 0 16 16">
+                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="container py-5">
+        <div class="row align-items-center g-5 py-3">
+            <div class="col-md-4 text-center">
+                <img src="assets/profile.jpg" alt="Henry Tottle" class="profile-img img-fluid rounded-circle">
+            </div>
+            <div class="col-md-8">
+                <h2 class="section-title fw-bold mb-4">About me</h2>
+                <p>I'm a full stack developer based near Bath, in Wiltshire. Originally a bookseller, I made the
+                    choice to change careers into something I feel more passionate about (and I was already very
+                    invested in the bookselling world!).</p>
+                <p>I graduated from the Full Stack Track at iO Academy and I'm now a full stack developer at
+                    Glentham Life Sciences, specialising in Django, systems architecture and production ownership
+                    of internal business platforms. I design and deploy the tools that replace manual, paper-based
+                    workflows across warehouse and logistics operations, from dispatch systems used on warehouse
+                    scanners to automated stock sync pipelines and operational dashboards.</p>
+                <p>I hold end-to-end responsibility for the stack, backend development, deployment infrastructure
+                    and dependency/security maintenance, and I'm still keen to sink my teeth into any project and
+                    relish the opportunity to learn new languages and frameworks.</p>
+                <div class="d-flex flex-wrap gap-2 mt-4">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Django</span>
+                    <span class="tech-tag">Celery</span>
+                    <span class="tech-tag">Redis</span>
+                    <span class="tech-tag">Docker</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">PHP</span>
+                    <span class="tech-tag">MariaDB</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">Tailwind CSS</span>
+                    <span class="tech-tag">Bootstrap</span>
+                    <span class="tech-tag">pytest</span>
                 </div>
             </div>
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
     </section>
-    <h2 class="bg-dark shadow col-sm-10 mx-auto my-sm-5"><br><br></h2>
-    <section class="about container text-center my-5">
-        <div class="m-3">
-            <h1 class="m-5">About me:</h1>
-            <p class="my-5">I am a full stack developer, based near Bath, in Wiltshire. Originally a Bookseller, I made
-                the choice to change
-                careers into something I feel more passionate about (and I was already very invested in the bookselling
-                world!).
-                I have graduated the Full Stack Track at iOAcademy with the ambition to become a full stack developer. I
-                am keen
-                to sink my teeth into any project and relish the opportunity to learn more programming languages.</p>
+
+    <section id="projects" class="container py-5">
+        <h2 class="section-title fw-bold mb-5">Projects</h2>
+
+        <div class="card project-card featured-card shadow-sm mb-4">
+            <div class="card-body p-4">
+                <span class="featured-badge mb-3">Professional work · Glentham Life Sciences</span>
+                <h3 class="card-title h5 mt-3">Historical Stock Tracking &amp; IST Dispatch</h3>
+                <div class="mb-2">
+                    <span class="tech-tag">Django</span>
+                    <span class="tech-tag">Celery</span>
+                    <span class="tech-tag">Redis</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">MariaDB</span>
+                </div>
+                <p class="card-text">As part of the Orders and Logistics Activity Dashboard (OLAD) I own at
+                    Glentham Life Sciences, I created a historical stock tracking algorithm that syncs regularly
+                    via Celery using a flagging system, alongside an IST dispatch system used on warehouse
+                    scanners. Together these have improved warehouse output from a maximum of 2-3 International
+                    Stock Transfers a week up to 7. They have also levelled the business skill, so a once complicated
+                    process restricted to the warehouse manager can now be done by every warehouse user.</p>
+                <p class="card-text mb-0"><small class="text-muted">Internal business system, not publicly
+                    accessible.</small></p>
+            </div>
         </div>
-    </section>
-    <section class="container">
-        <h1 id="projects">Projects:</h1>
 
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
 
-        <section class="row">
-            <div class="card col-sm m-1 shadow-lg">
-                <img src="subscriptionAssistant.png" class="card-img-top">
-                <div class="card-body ">
-                    <h3 class="card-title">Subscriptions Assistant - Full Stack - Work in Progress</h3>
-                    <p class="card-text mx-auto ">An app to assist in the role of book subscriptions to help make informed decisions about what book to pick each month.  The app fetches data from both Google Books API and Open Library to help populate information on each title where available.  It has CRUD features, tags can be created and deleted, and book lists can be imported from CSV.
-                        Front end is build with React with React Router and TailwindCSS, back end with PHP & Slim 3 and SQL with RESTful API.  MVC Architecture.</p>
-                    <a href="https://subscriptionsassistantfe.2024-henryt.dev.io-academy.uk/" target="_blank" class="btn btn-secondary mb-1">Subscriptions Assistant</a>
-                    <a href="https://github.com/Henry-Tottle/subscriptionsAssistantFE" target="_blank" class="btn btn-secondary">Front End Repo</a>
-                    <a href="https://github.com/Henry-Tottle/subscriptionsAssistant" target="_blank" class="btn btn-secondary">Back End Repo</a>
+            <div class="col">
+                <div class="card project-card h-100 shadow-sm">
+                    <img src="assets/subscription-assistant.jpg" class="card-img-top"
+                         alt="Screenshot of the Subscriptions Assistant app">
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title h5">Subscriptions Assistant</h3>
+                        <div class="mb-2">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Tailwind CSS</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">Slim 3</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                        <p class="card-text">A full stack app to support book subscription curation, helping make
+                            informed decisions about what book to pick each month. Fetches title data from the
+                            Google Books and Open Library APIs, with full CRUD, tagging and CSV import. React front
+                            end with React Router; PHP &amp; Slim 3 RESTful API over MySQL, in an MVC
+                            architecture.</p>
+                        <div class="card-links d-flex flex-wrap gap-2 mt-auto">
+                            <a href="https://subscriptionsassistantfe.2024-henryt.dev.io-academy.uk/" target="_blank"
+                               class="btn btn-accent">Live app</a>
+                            <a href="https://github.com/Henry-Tottle/subscriptionsAssistantFE" target="_blank"
+                               class="btn btn-outline-secondary">Front end</a>
+                            <a href="https://github.com/Henry-Tottle/subscriptionsAssistant" target="_blank"
+                               class="btn btn-outline-secondary">Back end</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-
-            <div class="card col-sm m-1 shadow-lg">
-                <img src="cakePHPSubscriptionsAssistant.png" class="card-img-top">
-                <div class="card-body">
-                    <h3 class="card-title">CakePHP Subscriptions Assistant</h3>
-                    <p class="card-text">Recreating my original Subscriptions Assistant use CakePHP framework, and mySQL, hosted on Railway.app and deployed
-                        directly from GitHub.
-                        This project has demonstrated using an opinionated framework, authentication, authorisation and use of ORMs.  It is now
-                        currently being tested by colleagues at my work place.
-                    </p>
-                    <a href="https://subscriptionsassistantcakephp-production.up.railway.app/" target="_blank"
-                       class="btn btn-secondary">CakePHP App</a>
-                    <a href="https://github.com/Henry-Tottle/subscriptionsAssistantCakePHP" target="_blank"
-                       class="btn btn-secondary">CakePHP App Repo</a>
-                </div>
-            </div>
-            <div class="card col-sm m-1 shadow-lg">
-                <img src="furnitureStoreApi.png" class="card-img-top">
-                <div class="card-title">
-                    <h3>Furniture Store API</h3>
-                    <p class="card-text">Demonstrating knowledge of Object-Oriented Programming in PHP, as well as SQL
-                        and JSON, I have built
-                        a working API for a preexisting front end website.
-                    </p>
-                    <a href="https://2024-henryt.dev.io-academy.uk/build/" target="_blank" class="btn btn-secondary">Furniture
-                        Store API</a>
-                    <a href="https://github.com/iO-Academy/24-jul-hippos-furniture-store-API" target="_blank" class="btn btn-secondary">Furniture
-                        Store API Repo</a>
-
+            <div class="col">
+                <div class="card project-card h-100 shadow-sm">
+                    <img src="assets/cakephp-subscriptions.jpg" class="card-img-top"
+                         alt="Screenshot of the CakePHP Subscriptions Assistant">
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title h5">CakePHP Subscriptions Assistant</h3>
+                        <div class="mb-2">
+                            <span class="tech-tag">CakePHP</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Railway</span>
+                        </div>
+                        <p class="card-text">A rebuild of my Subscriptions Assistant using the CakePHP framework and
+                            MySQL, hosted on Railway and deployed directly from GitHub. Demonstrates working with an
+                            opinionated framework, authentication, authorisation and ORMs. Currently being tested by
+                            colleagues at my workplace.</p>
+                        <div class="card-links d-flex flex-wrap gap-2 mt-auto">
+                            <a href="https://subscriptionsassistantcakephp-production.up.railway.app/" target="_blank"
+                               class="btn btn-accent">Live app</a>
+                            <a href="https://github.com/Henry-Tottle/subscriptionsAssistantCakePHP" target="_blank"
+                               class="btn btn-outline-secondary">Repo</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-
-        </section>
-        <section class="row justify-contents-center">
-            <div class="card col-sm-4 m-1 shadow-lg">
-                <img src="Screenshot 2024-10-08 at 15.45.48.png" class="card-img-top">
-                <div class="card-body ">
-                    <h3 class="card-title">Planet Age Calculator</h3>
-                    <p class="card-text mx-auto ">Using front end Typescript with event listeners and CSS with keyframes to provide some animation to the page,
-                        I have created a planet age calculator that takes your age as an input and based on which planet you choose, will calculate your age based on
-                        that planet's orbit.
-                    </p>
-                    <a href="https://henry-tottle.github.io/planetAgeGuesser/" target="_blank" class="btn btn-secondary mb-1">Planet Age
-                        Calculator</a>
-                    <a href="https://github.com/Henry-Tottle/planetAgeGuesser" target="_blank" class="btn btn-secondary ">Planet Age
-                        Calculator Repo</a>
-                </div>
-            </div>
-            <div class="card col-sm-4 m-1 shadow-lg">
-                <img src="romanNumeralsScreenshot.png" class="card-img-top">
-                <div class="card-body ">
-                    <h3 class="card-title">Roman Numerals Converter</h3>
-                    <p class="card-text mx-auto ">Using front end Typescript with event listeners and testing using Jest I have created a
-                        Roman Numerals converter that takes a number between 1 and 3999 and returns the roman numeral equivalent.
-                    </p>
-                    <a href="https://henry-tottle.github.io/romanNumeralsTypeScript/" target="_blank" class="btn btn-secondary mb-1">Roman Numerals Converter</a>
-
-                    <a href="https://github.com/Henry-Tottle/romanNumeralsTypeScript" target="_blank" class="btn btn-secondary">Roman Numerals Repo</a>
-                </div>
-            </div>
-            <div class="card col-sm m-1 shadow-lg">
-                <img src="jobsiteScreenShot.png" class="card-img-top">
-                <div class="card-body">
-                    <h3 class="card-title">React Project</h3>
-                    <p class="card-text">Using React and a preexisting API I have created a front end of a job listing
-                        website from
-                        a specified design.
-                        This has been an opportunity to also demonstrate knowledge of Bootstrap to quickly and
-                        efficiently replicate
-                        design choices.
-                    </p>
-                    <a href="https://2024-thomask.dev.io-academy.uk/dist/" target="_blank"
-                       class="btn btn-secondary">React Project</a>
-                    <a href="https://github.com/iO-Academy/2024-jul-fst-job-search-fe" target="_blank"
-                       class="btn btn-secondary">React Project Repo</a>
-                </div>
-            </div>
-        </section>
-        <section class="projects row">
-
-            <div class="card  col-sm-4 m-1  shadow-lg">
-                <img src="bookCollectorScreenshot.png" class="card-img-top">
-                <div class="card-body">
-                    <h3 class="card-title">Book Collector App</h3>
-                    <p class="card-text mx-auto">Using a combination of PHP, SQL, HTML and CSS I have built a collector
-                        app
-                        that tracks what books I have read, filters through genres and sorts through different fields.
-                        This was my second project at iOAcademy, and it was the first project where I had the
-                        opportunity to write in PHP.
-                    </p>
-                    <a href="https://2024-henryt.dev.io-academy.uk/book_collection_app/" target="_blank"
-                       class="btn btn-secondary">Collector App</a>
-                    <a href="https://github.com/Henry-Tottle/book_collection_app" target="_blank"
-                       class="btn btn-secondary">Collector App Repo</a>
+            <div class="col">
+                <div class="card project-card h-100 shadow-sm">
+                    <img src="assets/planet-age.jpg" class="card-img-top"
+                         alt="Screenshot of the Planet Age Calculator">
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title h5">Planet Age Calculator</h3>
+                        <div class="mb-2">
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">CSS Animations</span>
+                        </div>
+                        <p class="card-text">A calculator that takes your age and, based on the planet you choose,
+                            works out your age in that planet's orbits. Built with front end TypeScript and event
+                            listeners, with CSS keyframe animations bringing the page to life.</p>
+                        <div class="card-links d-flex flex-wrap gap-2 mt-auto">
+                            <a href="https://henry-tottle.github.io/planetAgeGuesser/" target="_blank"
+                               class="btn btn-accent">Live app</a>
+                            <a href="https://github.com/Henry-Tottle/planetAgeGuesser" target="_blank"
+                               class="btn btn-outline-secondary">Repo</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-
-            <div class="card col-sm-4 shadow-lg m-1">
-                <img src="JavascriptGameScreenshot.png" class="card-img-top">
-                <div class="card-body">
-                    <h3 class="card-title">Film Quote Guessing Game</h3>
-                    <p class="card-text">Using Javascript to provide interactivity to a page, I have built a film quote
-                        guessing game.
-                        You have 30 seconds to correctly guess as many film quotes as possible.
-                    </p>
-                    <a href="https://io-academy.github.io/2024-jul-fst-film-quote-quiz/" target="_blank"
-                       class="btn btn-secondary mb-1">Film Quote Guessing Game</a>
-                    <a href="https://github.com/iO-Academy/2024-jul-fst-film-quote-quiz" target="_blank"
-                       class="btn btn-secondary">Film Quote Guessing Game Repo</a>
-                </div>
-            </div>
-            <div class="card col-sm m-1 shadow-lg">
-                <img src="To%20Do%20ScreenShot.png" class="card-img-top">
-                <div class="card-body ">
-                    <h3 class="card-title">To Do App</h3>
-                    <p class="card-text mx-auto ">To demonstrate knowledge of MVC architecture and the framework Slim, I have created
-                        a CRUD to do app.  To further enhance this app I have experimented with adding in a calendar plugin using javascript.
-                    </p>
-                    <a href="https://to-do-app.2024-henryt.dev.io-academy.uk/" target="_blank" class="btn btn-secondary">To-do
-                        App</a>
-                    <a href="https://github.com/Henry-Tottle/my_To_Do" target="_blank" class="btn btn-secondary">To-do
-                        App Repo</a>
-                </div>
-            </div>
-            <div class="card col-sm m-1 shadow-lg">
-                <img src="jobsiteScreenShot.png" class="card-img-top">
-                <div class="card-body">
-                    <h3 class="card-title">React Project</h3>
-                    <p class="card-text">Using React and a preexisting API I have created a front end of a job listing
-                        website from
-                        a specified design.
-                        This has been an opportunity to also demonstrate knowledge of Bootstrap to quickly and
-                        efficiently replicate
-                        design choices.
-                    </p>
-                    <a href="https://2024-thomask.dev.io-academy.uk/dist/" target="_blank"
-                       class="btn btn-secondary">React Project</a>
-                    <a href="https://github.com/iO-Academy/2024-jul-fst-job-search-fe" target="_blank"
-                       class="btn btn-secondary">React Project Repo</a>
+            <div class="col">
+                <div class="card project-card h-100 shadow-sm">
+                    <img src="assets/roman-numerals.jpg" class="card-img-top"
+                         alt="Screenshot of the Roman Numerals Converter">
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title h5">Roman Numerals Converter</h3>
+                        <div class="mb-2">
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Jest</span>
+                        </div>
+                        <p class="card-text">A converter that takes a number between 1 and 3999 and returns its
+                            Roman numeral equivalent. Built with front end TypeScript and unit tested with Jest.</p>
+                        <div class="card-links d-flex flex-wrap gap-2 mt-auto">
+                            <a href="https://henry-tottle.github.io/romanNumeralsTypeScript/" target="_blank"
+                               class="btn btn-accent">Live app</a>
+                            <a href="https://github.com/Henry-Tottle/romanNumeralsTypeScript" target="_blank"
+                               class="btn btn-outline-secondary">Repo</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
+            <div class="col">
+                <div class="card project-card h-100 shadow-sm">
+                    <img src="assets/book-collector.jpg" class="card-img-top"
+                         alt="Screenshot of the Book Collector app">
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title h5">Book Collector App</h3>
+                        <div class="mb-2">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                        </div>
+                        <p class="card-text">A collector app that tracks the books I've read, with genre filtering
+                            and sorting across different fields. My second project at iO Academy, and my first
+                            opportunity to write PHP.</p>
+                        <div class="card-links d-flex flex-wrap gap-2 mt-auto">
+                            <a href="https://2024-henryt.dev.io-academy.uk/book_collection_app/" target="_blank"
+                               class="btn btn-accent">Live app</a>
+                            <a href="https://github.com/Henry-Tottle/book_collection_app" target="_blank"
+                               class="btn btn-outline-secondary">Repo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-        </section>
+            <div class="col">
+                <div class="card project-card h-100 shadow-sm">
+                    <img src="assets/film-quote-game.jpg" class="card-img-top"
+                         alt="Screenshot of the Film Quote Guessing Game">
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title h5">Film Quote Guessing Game</h3>
+                        <div class="mb-2">
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <p class="card-text">A film quote guessing game built with JavaScript to bring
+                            interactivity to the page. You have 30 seconds to correctly guess as many film quotes
+                            as possible.</p>
+                        <div class="card-links d-flex flex-wrap gap-2 mt-auto">
+                            <a href="https://io-academy.github.io/2024-jul-fst-film-quote-quiz/" target="_blank"
+                               class="btn btn-accent">Live app</a>
+                            <a href="https://github.com/iO-Academy/2024-jul-fst-film-quote-quiz" target="_blank"
+                               class="btn btn-outline-secondary">Repo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+        </div>
     </section>
 </main>
-<footer class="footer bg-dark text-white text-center">
-<p><small>Thanks for getting this far! Henry Tottle 2024: <a id="contact" class="text-decoration-none text-white" href="mailto:henrywilliamottle@gmail.com">henrywilliamtottle@gmail.com</a></small></p>
+<footer id="contact" class="text-center text-white py-4 mt-5">
+    <div class="container">
+        <p class="mb-1">Thanks for getting this far!</p>
+        <p class="mb-0"><small>Henry Tottle ·
+            <a class="text-decoration-none" href="mailto:henrywilliamtottle@gmail.com">henrywilliamtottle@gmail.com</a> ·
+            <a class="text-decoration-none" href="https://github.com/Henry-Tottle" target="_blank">GitHub</a> ·
+            <a class="text-decoration-none" href="https://www.linkedin.com/in/henry-william-tottle"
+               target="_blank">LinkedIn</a>
+        </small></p>
+    </div>
 </footer>
 </body>
 </html>
